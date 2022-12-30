@@ -1,0 +1,97 @@
+header {
+	justify-content: center;
+}
+input {
+	font-family: inherit;
+}
+.mark {
+	margin-block: 2em;
+	margin-inline: 0;
+	background-color: var(--color-grid);
+	color: var(--color-primary);
+	border-radius: .625em;
+	box-shadow: 0 .5em 0 0 var(--color-grid-shadow);
+	padding: 1.5em;
+	border: none;
+}
+.mark legend {
+	text-transform: uppercase;
+	letter-spacing: .0625em;
+	margin-block: 0 1.5em;
+	width: 100%;
+	font-size: 1em;
+	font-weight: normal;
+	float: left;
+}
+.mark p {
+	text-transform: uppercase;
+	letter-spacing: .0625em;
+	margin-block: 0;
+	font-size: 0.875em;
+	opacity: .5;
+}
+.marks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	background-color: var(--color-bg);
+	padding: .5em;
+	margin-block: 1.5em;
+	border-radius: 1.125em;
+}
+.marks .btn {
+	display: grid;
+}
+.marks .btn > * {
+	grid-area: 1/-1;
+}
+.marks input[type="radio"] {
+	appearance: none;
+}
+.marks .btn label {
+	display: grid;
+	place-content: center;
+	color: var(--color-primary);
+	border-radius: .625em;
+	block-size: 3.375em;
+	inline-size: 100%;
+	margin: 0;
+	cursor: pointer;
+	transition: background-color .2s, color .2s;
+}
+.marks .btn label > * {
+	grid-area: 1/-1;
+}
+@media (hover : hover) {
+	.marks label:hover {
+		background-color: hsla(198, 23%, 72%, .05);
+	}
+}
+.marks input[type="radio"]:checked + label {
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+}
+.marks label svg {
+	display: block;
+	inline-size: 2em;
+	block-size: auto;
+}
+/* submit buttons */
+.new .cpu {
+	background-color: var(--color-o);
+	box-shadow: 0 .5em 0 0 var(--color-o-shadow);
+	margin-block-end: var(--grid-gap);
+}
+.new .player {
+	background-color: var(--color-x);
+	color: var(--color-bg);
+	box-shadow: 0 .5em 0 0 var(--color-x-shadow);
+}
+@media (hover : hover) {
+	.new .cpu:hover {
+		background-color: var(--color-o-hover);
+	}
+	.new .player:hover {
+		background-color: var(--color-x-hover);
+	}
+}

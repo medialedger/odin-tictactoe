@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Odin | Tic Tac Toe | Game Board</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-board.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+</head>
+<body>
+
+	<header>
+		<img class="logo" src="assets/logo.svg" alt="XO logo" width="72" height="32">
+		<div class="turn">
+			<p><svg class="x" width="16" height="16"><title>X</title><use href="#icon-x"></use></svg><svg class="o" width="16" height="16"><title>O</title><use href="#icon-o"></use></svg> turn</p>
+		</div>
+		<button class="restart">
+			<img src="assets/icon-restart.svg" alt="restart" width="64" height="64">
+		</button>
+	</header>
+	<main>
+		<div class="board">
+			<button data-grid="1"></button>
+			<button data-grid="2"></button>
+			<button data-grid="3"></button>
+			<button data-grid="4"></button>
+			<button data-grid="5"></button>
+			<button data-grid="6"></button>
+			<button data-grid="7"></button>
+			<button data-grid="8"></button>
+			<button data-grid="9"></button>
+			<div class="score score-x">X (<span id="score-x"></span>) <b>0</b></div>
+			<div class="score score-tie">Ties <b>0</b></div>
+			<div class="score score-o">O (<span id="score-o"></span>) <b>0</b></div>
+		</div>
+	</main>
+
+	<dialog id="dialog-win">
+		<form method="dialog">
+			<p>Player 1 wins!</p>
+			<h3>O takes the round</h3>
+			<div class="btn-box">
+				<button class="btn-secondary btn-quit">Quit</button>
+				<button class="btn-secondary btn-next">Next round</button>
+			</div>
+		</form>
+	</dialog>
+	<dialog id="dialog-tie">
+		<form method="dialog">
+			<h3>Round tied</h3>
+			<div class="btn-box">
+				<button class="btn-secondary btn-quit">Quit</button>
+				<button class="btn-secondary btn-next">Next round</button>
+			</div>
+		</form>
+	</dialog>
+	<dialog id="dialog-restart">
+		<form method="dialog">
+			<h3>Restart game?</h3>
+			<div class="btn-box">
+				<button class="btn-secondary btn-cancel">No, cancel</button>
+				<button class="btn-secondary btn-restart">Yes, restart</button>
+			</div>
+		</form>
+	</dialog>
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+		<symbol id="icon-o" viewBox="0 0 64 64">
+			<path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="currentColor"/>
+		</symbol>
+		<symbol id="icon-x" viewBox="0 0 64 64">
+			<path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="currentColor" fill-rule="evenodd"/>
+		</symbol>
+	</svg>
+
+	<script src="scripts.js" defer></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+</body>
+</html>

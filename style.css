@@ -1,0 +1,100 @@
+:root {
+	--color-bg: hsl(202, 32%, 15%);
+	--color-grid: hsl(199, 35%, 19%);
+	--color-grid-shadow: hsl(201, 45%, 11%);
+	--color-primary: hsl(198, 23%, 72%);
+	--color-primary-shadow: hsl(199, 17%, 51%);
+	--color-primary-hover: hsl(197, 33%, 89%);
+	--color-x: hsl(178, 60%, 48%);
+	--color-x-shadow: hsl(178, 78%, 31%);
+	--color-x-hover: hsl(178, 75%, 65%);
+	--color-o: hsl(39, 88%, 58%);
+	--color-o-shadow: hsl(39, 83%, 44%);
+	--color-o-hover: hsl(39, 100%, 69%);
+	--box-width: 88%;
+	--box-max-width: 28.75em;
+	--grid-gap: 1.25em;
+}
+body {
+	font-family: 'Outfit', sans-serif;
+	box-sizing: border-box;
+	background-color: var(--color-bg);
+	color: var(--color-primary);
+	text-align: center;
+	min-block-size: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+body *, body *::before, body *::after {
+	box-sizing: inherit;
+}
+button,
+input[type="submit"] {
+	border: none;
+	padding: 0;
+	font-size: 1em;
+	font-family: inherit;
+}
+.btn-primary {
+	display: grid;
+	place-content: center;
+	inline-size: 100%;
+	font-weight: bold;
+	block-size: 3em;
+	color: var(--color-bg);
+	border-radius: .875em;
+	text-transform: uppercase;
+	letter-spacing: .0625em;
+	transition: background-color .2s;
+}
+.btn-secondary {
+	display: grid;
+	place-content: center;
+	block-size: 3em;
+	padding-inline: 1em;
+	color: var(--color-bg);
+	border-radius: .875em;
+	text-transform: uppercase;
+	letter-spacing: .0625em;
+	transition: background-color .2s;
+}
+.sr-only {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+
+/* header */
+header {
+	display: flex;
+	gap: var(--grid-gap);
+	align-items: center;
+	inline-size: var(--box-width);
+	max-inline-size: var(--box-max-width);
+	margin-inline: auto;
+}
+header .logo {
+	display: block;
+	inline-size: 4.5em;
+	block-size: auto;
+}
+
+main {
+	inline-size: var(--box-width);
+	max-inline-size: var(--box-max-width);
+}
+
+@media (hover : hover) {
+	button,
+	input[type="submit"] {
+		cursor: pointer;
+	}
+}

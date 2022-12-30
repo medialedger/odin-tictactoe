@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Odin | Tic Tac Toe | Setup</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-new.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+</head>
+<body>
+
+	<header>
+		<img class="logo" src="assets/logo.svg" alt="XO logo" width="72" height="32">
+	</header>
+	<main>
+		<form class="new" action="board.html">
+			<fieldset class="mark">
+				<legend>Pick player 1’s mark</legend>
+				<div class="marks">
+					<div class="btn">
+						<input type="radio" name="p1" value="x" id="p1-x" required>
+						<label for="p1-x"><span class="sr-only">X</span><svg width="32" height="32"><title>X icon</title><use href="#icon-x"></use></svg></label>
+					</div>
+					<div class="btn">
+						<input type="radio" name="p1" value="o" id="p1-o" required>
+						<label for="p1-o"><span class="sr-only">O</span><svg width="32" height="32"><title>O icon</title><use href="#icon-o"></use></svg></label>
+					</div>
+				</div>
+				<p>Remember: X goes first</p>
+			</fieldset>
+			<button class="btn-primary cpu" name="opponent" value="cpu">New game (vs CPU)</button>
+			<button class="btn-primary player" name="opponent" value="player">New game (vs Player)</button>
+		</form>
+	</main>
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+		<symbol id="icon-o" viewBox="0 0 64 64">
+			<path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="currentColor"/>
+		</symbol>
+		<symbol id="icon-x" viewBox="0 0 64 64">
+			<path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="currentColor" fill-rule="evenodd"/>
+		</symbol>
+	</svg>
+
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+</body>
+</html>
