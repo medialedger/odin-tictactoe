@@ -81,10 +81,10 @@ const game = (() => {
 		}
 	}
 	const init = () => {
-		if (location.pathname === '/') {
+		if (location.pathname === '/' || location.pathname === '/odin-tictactoe/') {
 			document.querySelector('form.new').addEventListener('submit', startGame);
 		}
-		if (location.pathname === '/board.html') {
+		if (location.pathname === '/board.html' || location.pathname === '/odin-tictactoe/board.html') {
 			renderScores();
 			document.querySelector('button[data-modal="dialog-restart"]').addEventListener('click', newGameDialog);
 			document.querySelector('button.btn-restart').addEventListener('click', newGame);
@@ -191,7 +191,7 @@ const board = (() => {
 		}
 	}
 	const init = () => {
-		if (location.pathname === '/board.html') {
+		if (location.pathname === '/board.html' || location.pathname === '/odin-tictactoe/board.html') {
 			renderBoard();
 			addMarks();
 			setCurrentPlayer();
