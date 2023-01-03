@@ -17,7 +17,7 @@
 		<div class="turn">
 			<p><svg class="x" width="16" height="16"><title>X</title><use href="#icon-x"></use></svg><svg class="o" width="16" height="16"><title>O</title><use href="#icon-o"></use></svg> turn</p>
 		</div>
-		<button class="restart">
+		<button class="restart" data-modal="dialog-restart">
 			<img src="assets/icon-restart.svg" alt="restart" width="64" height="64">
 		</button>
 	</header>
@@ -32,16 +32,16 @@
 			<button data-grid="7"></button>
 			<button data-grid="8"></button>
 			<button data-grid="9"></button>
-			<div class="score score-x">X (<span id="score-x"></span>) <b>0</b></div>
+			<div class="score score-x">P1 (<span id="score-x"></span>) <b>0</b></div>
 			<div class="score score-tie">Ties <b>0</b></div>
-			<div class="score score-o">O (<span id="score-o"></span>) <b>0</b></div>
+			<div class="score score-o">P2 (<span id="score-o"></span>) <b>0</b></div>
 		</div>
 	</main>
 
 	<dialog id="dialog-win">
 		<form method="dialog">
 			<p>Player 1 wins!</p>
-			<h3>O takes the round</h3>
+			<h3><span class="player"></span> takes the round</h3>
 			<div class="btn-box">
 				<button class="btn-secondary btn-quit">Quit</button>
 				<button class="btn-secondary btn-next">Next round</button>
@@ -77,7 +77,6 @@
 	</svg>
 
 	<script src="scripts.js" defer></script>
-
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
 
 </body>
